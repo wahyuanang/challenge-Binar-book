@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Librarian App Team 2</title>
+    <link rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="src/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+    <header class="navbar-light navbar-sticky header-static">
+        <nav class="navbar navbar-expand-xl" id="navbar">
+            <div class="container-fluid px-3 px-xl-5 d-flex justify-content-between align-items-center">
+                <a class="navbar-brand" href="index.html">
+                    <img class="navbar-brand-item me-2" src="public/images/logo book.svg" alt="logo" />
+                    <span class="navbar-brand-item text-white fw-bold">LibriStaff Manager</span>
+                </a>
+
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse w-auto" id="navbarCollapse">
+                    <ul class="navbar-nav navbar-nav-scroll mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#hero">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#catalog">Kategori</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#catalog">Buku</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#form-new-staff">Staff</a>
+                        </li>
+                    </ul>
+
+                    <div class="btn-theme" role="group" aria-label="Basic example">
+                        <button type="button" id="buttonLight" class="btn-light">Light</button>
+                        <button type="button" id="buttonDark" class="btn-dark">Dark</button>
+                    </div>
+
+                    <div class="nav my-3 my-xl-0 px-lg-4 flex-nowrap align-items-center">
+                        <div class="nav-item w-100">
+                            <form class="position-relative">
+                                <input class="form-control pe-5 bg-white search-input" type="search"
+                                    placeholder="Search" aria-label="Search" />
+                                <button
+                                    class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset"
+                                    type="submit">
+                                    <i class="fas fa-search fs-6"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero container my-5">
+        <div class="bg-gray d-flex justify-content-center py-5 rounded-4">
+            <div class="hero-content">
+                <div class="d-lg-flex justify-content-between align-items-center">
+                    <div class="desc-hero">
+                        <h2 class="text-deepblue fw-bold mb-3">
+                            Selamat Datang Kembali,
+                            <span class="text-skyblue">Librarian</span>
+                        </h2>
+                        <p class="mb-3">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            tempor incididunt
+                        </p>
+                        <button class="bg-deepblue">Selengkapnya</button>
+                    </div>
+                    <div class="img-hero">
+                        <img src="public/images/hero-img.png" alt="hero-img" class="img-fluid" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian form staff baru -->
+    <section id="form-new-staf">
+        <div class="container staff-container">
+            <div class="row">
+                <!-- Form Input New Staff -->
+                <section id="form-new-staff">
+                    <div class="container staff-container">
+                        <div class="row">
+                            <!-- Form Input -->
+                            <div class="col-12 col-lg-4 form-container mb-4">
+                                <h4 class="text-center text-white fw-bold my-4">
+                                    Input a New Staff
+                                </h4>
+                                <form id="staffForm">
+                                    <!-- Pilihan Shift -->
+                                    <div class="mb-3">
+                                        <label for="shift" class="form-label fw-bold text-white">Select Shift</label>
+                                        <select id="shift" class="form-select" required>
+                                            <option value="">Select shift</option>
+                                            <option value="shift-night">Night Shift</option>
+                                            <option value="shift-morning">Morning Shift</option>
+                                        </select>
+                                    </div>
+                                    <!-- Input Name -->
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label fw-bold text-white">Name</label>
+                                        <input type="text" class="form-control" id="name" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="address" class="form-label fw-bold text-white">Address</label>
+                                        <input type="text" class="form-control" id="address" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label fw-bold text-white">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" required />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label fw-bold text-white">Email</label>
+                                        <input type="email" class="form-control" id="email" required />
+                                    </div>
+                                    <!-- Submit Button -->
+                                    <button type="submit"
+                                        class="btn btn-primary w-50 mt-5 d-flex mx-auto justify-content-center fw-bold">
+                                        Submit
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- Staff Cards Section -->
+                            <div class="col-12 col-lg-8">
+                                <div class="row">
+                                    <!-- Night Shift Cards -->
+                                    <div class="col-12 col-lg-6 mb-4">
+                                        <div class="section card-staff custom-scroll" id="shift-night-cards">
+                                            <h4 class="text-center text-white">Night Shift</h4>
+                                            <div style="max-height: 500px; overflow-y: auto; padding: 10px">
+                                                <div class="no-cards-message text-white text-center">
+                                                    No staff in Night Shift
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Morning Shift Cards -->
+                                    <div class="col-12 col-lg-6 mb-4">
+                                        <div class="section card-staff custom-scroll" id="shift-morning-cards">
+                                            <h4 class="text-center text-white">Morning Shift</h4>
+                                            <div style="max-height: 500px; overflow-y: auto; padding: 10px">
+                                                <div class="no-cards-message text-white text-center">
+                                                    No staff in Morning Shift
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="catalog" class="catalog container my-5">
+
+        <!-- Catalog Header / Text -->
+        <div>
+            <p class="pt-2 pb-0 mb-0 font__poppins-28px-bold">Koleksi buku kami</p>
+            <p class="pt-1 pb-3 mb-0 font__poppins-16px-regular">Berikut adalah beberapa cuplikan buku yang kami miliki
+            </p>
+        </div>
+
+        <!-- Catalog Contents -->
+        <div class="catalog-content">
+
+            <!-- Book 1 -->
+            <div class="card catalog-card">
+                <div class="catalog-image-container">
+                    <img class="catalog-image rounded-top img-fluid" src="public/catalog/batman-1.jpeg"
+                        alt="book-cover">
+                </div>
+                <div class="catalog-information bg-gray rounded-bottom">
+                    <p class="pt-2 pb-0 mb-0 font__poppins-14px-bold">Batman #101</p>
+                    <p class="pt-1 pb-3 mb-0 font__poppins-14px-regular">Wahyu Anang</p>
+                </div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="card catalog-card">
+                <div class="catalog-image-container">
+                    <img class="catalog-image rounded-top img-fluid" src="public/catalog/spiderman.jpg"
+                        alt="book-cover">
+                </div>
+                <div class="catalog-information bg-gray rounded-bottom">
+                    <p class="pt-2 pb-0 mb-0 font__poppins-14px-bold">Spiderman</p>
+                    <p class="pt-1 pb-3 mb-0 font__poppins-14px-regular">Nita Fitrotul</p>
+                </div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="card catalog-card">
+                <div class="catalog-image-container">
+                    <img class="catalog-image rounded-top img-fluid" src="public/catalog/iron-man.jpeg"
+                        alt="book-cover">
+                </div>
+                <div class="catalog-information bg-gray rounded-bottom">
+                    <p class="pt-2 pb-0 mb-0 font__poppins-14px-bold">Iron-Man</p>
+                    <p class="pt-1 pb-3 mb-0 font__poppins-14px-regular">Rafly Aziz</p>
+                </div>
+            </div>
+
+            <!-- Book 4 -->
+            <div class="card catalog-card">
+                <div class="catalog-image-container">
+                    <img class="catalog-image rounded-top img-fluid" src="public/catalog/tgg.jpeg" alt="book-cover">
+                </div>
+                <div class="catalog-information bg-gray rounded-bottom">
+                    <p class="pt-2 pb-0 mb-0 font__poppins-14px-bold">The Great Gatsby</p>
+                    <p class="pt-1 pb-3 mb-0 font__poppins-14px-regular">Tegar Alfa</p>
+                </div>
+            </div>
+
+            <!-- Book 5 -->
+            <div class="card catalog-card">
+                <div class="catalog-image-container">
+                    <img class="catalog-image rounded-top img-fluid" src="public/catalog/The-Godfather.jpg"
+                        alt="book-cover">
+                </div>
+                <div class="catalog-information bg-gray rounded-bottom">
+                    <p class="pt-2 pb-0 mb-0 font__poppins-14px-bold">The Godfather</p>
+                    <p class="pt-1 pb-3 mb-0 font__poppins-14px-regular">Jetro Sulthan</p>
+                </div>
+            </div>
+
+            <!-- Book 6 -->
+            <div class="card catalog-card">
+                <div class="catalog-image-container">
+                    <img class="catalog-image rounded-top img-fluid" src="public/catalog/invis.jpeg" alt="book-cover">
+                </div>
+                <div class="catalog-information bg-gray rounded-bottom">
+                    <p class="pt-2 pb-0 mb-0 font__poppins-14px-bold">Invisible Man</p>
+                    <p class="pt-1 pb-3 mb-0 font__poppins-14px-regular">Muhammad Rifqi</p>
+                </div>
+            </div>
+
+            <!-- Book 7 -->
+            <div class="card catalog-card">
+                <div class="catalog-image-container">
+                    <img class="catalog-image rounded-top img-fluid" src="public/catalog/aot.jpeg" alt="book-cover">
+                </div>
+                <div class="catalog-information bg-gray rounded-bottom">
+                    <p class="pt-2 pb-0 mb-0 font__poppins-14px-bold">Attack on Titan</p>
+                    <p class="pt-1 pb-3 mb-0 font__poppins-14px-regular">Ahmad Alif</p>
+                </div>
+            </div>
+
+            <!-- Book 8 -->
+            <div class="card catalog-card">
+                <div class="catalog-image-container">
+                    <img class="catalog-image rounded-top img-fluid" src="public/catalog/op.jpeg" alt="book-cover">
+                </div>
+                <div class="catalog-information bg-gray rounded-bottom">
+                    <p class="pt-2 pb-0 mb-0 font__poppins-14px-bold">One Piece</p>
+                    <p class="pt-1 pb-3 mb-0 font__poppins-14px-regular">Brandon Ogaden</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Testimonial" class="pb-5 container">
+        <div class="text-center mb-4">
+            <h3 class="fw-bold">Staff Kami</h3>
+            <p class="fw-medium">Kenalin kami staff kelompok 2</p>
+        </div>
+        <div id="carouselExampleRide" class="carousel slide rounded-3 position-relative" data-bs-ride="true">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div
+                        class="carousel-content d-flex align-items-center flex-column flex-md-row justify-content-center text-center">
+                        <img src="public/images/foto 1.png" class="d-block testimonial-img me-4"
+                            alt="profile testimonial" />
+                        <div class="testimonial-content">
+                            <h1 class="fs-5 fw-bold">Nita Fitrotul Mar'ah</h1>
+                            <span style="color: #7a7a7a">FullStack Developer</span>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Minus vitae magni, officia accusamus numquam saepe itaque
+                            </p>
+                            <div class="button-follow-me d-flex">
+                                <button type="button">Follow Me</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div
+                        class="carousel-content d-flex align-items-center flex-column flex-md-row justify-content-center text-center">
+                        <img src="public/images/foto 2.png" class="d-block testimonial-img me-4"
+                            alt="profile testimonial" />
+                        <div class="testimonial-content">
+                            <h1 class="fs-5 fw-bold">Rafly Aziz Abdillah</h1>
+                            <span style="color: #7a7a7a">FullStack Developer</span>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Minus vitae magni, officia accusamus numquam saepe itaque
+                            </p>
+                            <div class="button-follow-me d-flex">
+                                <button type="button">Follow Me</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div
+                        class="carousel-content d-flex align-items-center flex-column flex-md-row justify-content-center text-center">
+                        <img src="public/images/foto 3.png" class="d-block testimonial-img me-4"
+                            alt="profile testimonial" />
+                        <div class="testimonial-content">
+                            <h1 class="fs-5 fw-bold">Gede Brandon Abelio Ogaden</h1>
+                            <span style="color: #7a7a7a">FullStack Developer</span>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Minus vitae magni, officia accusamus numquam saepe itaque
+                            </p>
+                            <div class="button-follow-me d-flex">
+                                <button type="button">Follow Me</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div
+                        class="carousel-content d-flex align-items-center flex-column flex-md-row justify-content-center text-center">
+                        <img src="public/images/foto 4.png" class="d-block testimonial-img me-4"
+                            alt="profile testimonial" />
+                        <div class="testimonial-content">
+                            <h1 class="fs-5 fw-bold">Tegar Alfa Rizzi</h1>
+                            <span style="color: #7a7a7a">FullStack Developer</span>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Minus vitae magni, officia accusamus numquam saepe itaque
+                            </p>
+                            <div class="button-follow-me d-flex">
+                                <button type="button">Follow Me</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div
+                        class="carousel-content d-flex align-items-center flex-column flex-md-row justify-content-center text-center">
+                        <img src="public/images/foto 5.png" class="d-block testimonial-img me-4"
+                            alt="profile testimonial" />
+                        <div class="testimonial-content">
+                            <h1 class="fs-5 fw-bold">Wahyu Anang Zulfikri</h1>
+                            <span style="color: #7a7a7a">FullStack Developer</span>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Minus vitae magni, officia accusamus numquam saepe itaque
+                            </p>
+                            <div class="button-follow-me d-flex">
+                                <button type="button">Follow Me</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div
+                        class="carousel-content d-flex align-items-center flex-column flex-md-row justify-content-center text-center">
+                        <img src="public/images/foto 6.png" class="d-block testimonial-img me-4"
+                            alt="profile testimonial" />
+                        <div class="testimonial-content">
+                            <h1 class="fs-5 fw-bold">Jetro Sulthan Fatih Nurrafi</h1>
+                            <span style="color: #7a7a7a">FullStack Developer</span>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Minus vitae magni, officia accusamus numquam saepe itaque
+                            </p>
+                            <div class="button-follow-me d-flex">
+                                <button type="button">Follow Me</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div
+                        class="carousel-content d-flex align-items-center flex-column flex-md-row justify-content-center text-center">
+                        <img src="public/images/foto 7.png" class="d-block testimonial-img me-4"
+                            alt="profile testimonial" />
+                        <div class="testimonial-content">
+                            <h1 class="fs-5 fw-bold">Muhammad Rifqi Tri Afandi</h1>
+                            <span style="color: #7a7a7a">FullStack Developer</span>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Minus vitae magni, officia accusamus numquam saepe itaque
+                            </p>
+                            <div class="button-follow-me d-flex">
+                                <button type="button">Follow Me</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div
+                        class="carousel-content d-flex align-items-center flex-column flex-md-row justify-content-center text-center">
+                        <img src="public/images/foto 8.png" class="d-block testimonial-img me-4"
+                            alt="profile testimonial" />
+                        <div class="testimonial-content">
+                            <h1 class="fs-5 fw-bold">Ahmad Alif Ramadhan</h1>
+                            <span style="color: #7a7a7a">FullStack Developer</span>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Minus vitae magni, officia accusamus numquam saepe itaque
+                            </p>
+                            <div class="button-follow-me d-flex">
+                                <button type="button">Follow Me</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-prev-next">
+                    <button class="position-absolute start-0" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="prev">
+                        <img src="public/images/left.svg" alt="icon prev" />
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="position-absolute end-0" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="next">
+                        <img src="public/images/next.svg" alt="icon next" />
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark & Light Theme -->
+
+
+    <!-- footer section -->
+    <footer id="footer" class=" mt-5 py-5 m-auto container">
+        <!-- for footer 1 -->
+        <section class="footer-1">
+            <div class="footer-logo">
+                <img src="public/images/binar-academy-logo.svg" alt="Binar Academy" />
+                <p>Binar Academy Library</p>
+            </div>
+            <h3 class="footer-1-h">Address</h3>
+            <p class="footer-1-p">
+                Promenade 20, Jl. Bangka Raya No.20 Blok L, Pela Mampang, Kec. Mampang
+                Prpt., Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12720
+            </p>
+        </section>
+        <!-- for footer 2 -->
+        <section class="footer-2">
+            <h3>Contact Us</h3>
+            <div class="img-wa">
+                <img src="public/images/wa-icon.svg" alt="Whatsapp" />
+                <p>022899794924</p>
+            </div>
+            <div class="img-linkedin">
+                <img src="public/images/linkedin-icon.svg" alt="Linkedin" />
+                <p>Binar Library</p>
+            </div>
+            <div class="img-ig">
+                <img src="public/images/ig-icon.svg" alt="Instagram" />
+                <p>@BinarLibrary</p>
+            </div>
+        </section>
+        <!-- for footer 3 -->
+        <section class="footer-3">
+            <a href="#" id="link">Beranda</a>
+            <a href="#" id="link">Staff</a>
+            <a href="#" id="link">Kategori Buku</a>
+            <a href="#" id="link">Buku</a>
+        </section>
+
+        <!-- for footer 4 -->
+        <section class="footer-4">
+            <h3 class="footer-4-h">Random Quote</h3>
+            <p class="footer-4-quote">
+                “Think before you speak. Read before you think”.
+            </p>
+            <p class="footer-4-name">- Fran Lebowitz.</p>
+        </section>
+    </footer>
+
+    <script src="src/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./src/javascript/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>
