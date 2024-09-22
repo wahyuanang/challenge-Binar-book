@@ -47,16 +47,18 @@
                         </li>
                     </ul>
 
-                    <div class="btn-theme" role="group" aria-label="Basic example">
-                        <button type="button" id="buttonLight" class="btn-light">Light</button>
-                        <button type="button" id="buttonDark" class="btn-dark">Dark</button>
+                    <div>
+                        <select id="themeSelect" class="form-select" required>
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                        </select>
                     </div>
 
                     <div class="nav my-3 my-xl-0 px-lg-4 flex-nowrap align-items-center">
                         <div class="nav-item w-100">
                             <form class="position-relative">
-                                <input class="form-control pe-5 bg-white search-input" type="search"
-                                    placeholder="Search" aria-label="Search" />
+                                <input class="form-control px-4 py-3 bg-white search-input" type="search"
+                                    placeholder="Search.." aria-label="Search" />
                                 <button
                                     class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset"
                                     type="submit">
@@ -113,7 +115,7 @@
                                     <!-- Pilihan Shift -->
                                     <div class="mb-3">
                                         <label for="shift" class="form-label fw-bold text-white">Select Shift</label>
-                                        <select id="shift" class="form-select" required>
+                                        <select id="shift" class="form-select p-2" required>
                                             <option value="">Select shift</option>
                                             <option value="shift-night">Night Shift</option>
                                             <option value="shift-morning">Morning Shift</option>

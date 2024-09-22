@@ -219,8 +219,7 @@ function modifyStaff(button) {
   });
 }
 
-// DARK-THEMESS
-
+// DARK-THEMES
 let body = document.body;
 let navbar = document.getElementById("navbar");
 let navbarFill = document.getElementById("navbarCollapse");
@@ -231,54 +230,48 @@ let catalogFill = document.querySelectorAll("#headline, #author");
 let carouselFrame = document.getElementById("carouselExampleRide");
 let testimonial = document.getElementById("Testimonial");
 let catalog = document.getElementById("catalog");
-let darkTheme = document.getElementById("buttonDark");
-let lightTheme = document.getElementById("buttonLight");
+let themeSelect = document.getElementById("themeSelect");
 
-darkTheme.addEventListener('click', () => {
+themeSelect.addEventListener('change', function() {
+    if (this.value === 'dark') {
+        body.style.backgroundColor = "#0F0F0F";
+        navbar.style.backgroundColor = "#494949";
+        carouselFrame.style.backgroundColor = "#707070";
+        navbarFill.style.color = "#2DC9EF";
+        footer.style.color = "white";
+        testimonial.style.color = "white";
+        catalog.style.color = "white";
 
-  body.style.backgroundColor = "#0F0F0F";
-  navbar.style.backgroundColor = "#494949";
-  carouselFrame.style.backgroundColor = "#707070";
-  navbarFill.style.color = "#2DC9EF";
-  footer.style.color = "white";
-  testimonial.style.color = "white";
-  catalog.style.color = "white";
+        link.forEach(link => {
+            link.style.color = "white";
+        });
 
-  link.forEach(link => {
-    link.style.color = "white";
-  });
+        carousel.forEach(carousel => {
+            carousel.style.color = "white";
+        });
 
-  carousel.forEach(carousel => {
-    carousel.style.color = "white";
-  });
+        catalogFill.forEach(catalogFill => {
+            catalogFill.style.color = "black";
+        });
+    } else if (this.value === 'light') {
+        body.style.backgroundColor = "#FFFFFF";
+        navbar.style.backgroundColor = "#0065D0";
+        carouselFrame.style.backgroundColor = "#2DC9EF";
+        navbarFill.style.color = "#2DC9EF";
+        footer.style.color = "black";
+        testimonial.style.color = "black";
+        catalog.style.color = "black";
 
-  catalogFill.forEach(catalogFill => {
-    catalogFill.style.color = "black";
-  });
-    
+        link.forEach(link => {
+            link.style.color = "black";
+        });
+
+        carousel.forEach(carousel => {
+            carousel.style.color = "black";
+        });
+
+        catalogFill.forEach(catalogFill => {
+            catalogFill.style.color = "black";
+        });
+    }
 });
-
-lightTheme.addEventListener('click', () => {
-
-  body.style.backgroundColor = "#FFFFFF";
-  navbar.style.backgroundColor = "#0065D0";
-  carouselFrame.style.backgroundColor = "#2DC9EF";
-  navbarFill.style.color = "#2DC9EF";
-  footer.style.color = "black";
-  testimonial.style.color = "black";
-  catalog.style.color = "black";
-
-  link.forEach(link => {
-    link.style.color = "black";
-  });
-
-  carousel.forEach(carousel => {
-    carousel.style.color = "black";
-  });
-
-  catalogFill.forEach(catalogFill => {
-    catalogFill.style.color = "black";
-  });
-
-});
-

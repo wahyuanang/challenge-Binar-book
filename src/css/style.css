@@ -525,27 +525,6 @@
   /* Footer section */
 }
 
-/* Button Theme */
-
-@media (min-width: 991px) {
-#navbarCollapse  .btn-theme {
-  padding-left: 20px;
-}
-}
-
-.btn-light {
-  background-color: white;
-  color: black;
-  font-weight: 600;
-  border-radius: 10px;
-}
-
-.btn-dark {
-  background-color: black;
-  color: white;
-  font-weight: 600;
-  border-radius: 10px; 
-}
 
 @media (min-width: 991px) {
 
